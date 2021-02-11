@@ -1,0 +1,96 @@
+%! Author = gcpease
+%! Date = 2/10/2021
+
+\documentclass[11pt]{article}
+\usepackage{lingmacros}
+\usepackage{tree-dvips}
+\usepackage{amsmath}
+\usepackage{nccmath}
+\usepackage{mathtools}
+\usepackage{paracol}
+\usepackage{amssymb}
+\usepackage[margin=0.2in]{geometry}
+\usepackage[T1]{fontenc}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arcsc}
+\begin{document}
+    \section*{Calculus III - MATH 2210 FA2021}
+    \begin{paracol}{2}
+        \section{Week 1}
+        Equation for a sphere: $(x-h)^2+(y-j)^2+(z-k)^2=r^2$
+        Midpoint: $m_x=\frac{x_1-x_2}{2}$\newline
+        Magnitude: $|u| = \sqrt{u_1^2 + u_2^2 + u_3^2}$ \newline
+        Projection of U onto V: \newline
+        $pr_{v}u=( \frac{u \cdot v}{||v||} )$
+        \newline
+        $u \times v = <u_2 v_3 - u_3 v_2, u_3 v_1 - u_1 v_3 , u_1 v_2 - u_2 v_1 >$ \newline
+
+
+        \section{Week 2}
+        $a_t = T \cdot a$ \newline
+        $a_n = \sqrt{||r''(t)||^2 - a_t^2}$ \newline
+        $A_t = a_t T(t) + a_n N(t)$ \newline
+        $T(t) = \frac{1}{||r'(t)||} \cdot r'(t)$ \newline
+        $N(t) = \frac{1}{||T'(t)||} \cdot T'(t)$ \newline
+        $K(t) = \frac{||r'(t) \times r''(t)||}{||r'(t)||^3}$ \newline
+        $B(t) = T(t) \times N(t)$ \newline
+
+
+        \section{Week 3}
+
+        \subsection{Cartesian \guillemotright Cylindrical}
+        $r = \sqrt{x^2+y^2}$ \newline
+        $\theta = \arctan(\frac{y}{x})$ \newline
+        $z=z$
+
+        \subsection{Cartesian \guillemotright Spherical}
+        $r=\sqrt{x^2+y^2+z^2}$ \newline
+        $\theta = \arctan(\frac{y}{x})$ \newline
+        $\varphi = \arccos(\frac{z}{r})$ \newline
+
+        \subsection{Cylindrical \guillemotright Cartesian}
+        $x = r \cos\theta$ \newline
+        $y = r \sin\theta$ \newline
+        $z = z$ \newline
+
+        \subsection{Spherical \guillemotright Cylindrical}
+        \begin{fleqn}
+            $
+            P = r \sin \theta \newline
+            \theta = \theta \newline
+            z = \cos \theta \newline
+            $
+        \end{fleqn}
+
+        \switchcolumn
+
+        \subsection*{Spherical \guillemotright Cartesian}
+        $x = r \sin\phi \cos \theta$ \newline
+        $y = r \sin\phi \sin \theta$    \newline
+        $z = r \cos\phi$    \newline
+        \section*{Examples}
+
+        \subsection{}
+        \begin{fleqn}
+            Let L be determined by the equations $y=2$ and $x=6z$. If we rotate around the X axis, we get an equation
+            \newline
+            $Ax^2 + By^2 + Cz^2 = 1$, find A, B, and C.\newline
+            $y^2 + z^2 = 2^2$ \newline
+            $\frac{1}{4}y^2 + \frac{1}{4}z^2 = 1  (B,C)$ \newline
+            Find a second point, this case it will be $<6,2,1>$ \newline
+            $A(6)^2 + \frac{1}{4}(2)^2 + \frac{1}{4}(1)^2 = 1$ \newline
+            $A(6)^2 + \frac{1}{4}(1)^2 = 0$ \newline
+            $A36 = - \frac{1}{4}$ \newline
+            $A = - \frac{1}{4*36}$ \newline
+        \end{fleqn}
+
+        \subsection{}
+        \begin{fleqn}
+            Find an equation of the ellipsoid passing through the points \newline
+            $(\pm3,0,0),(0,\pm1,0),(0,0,\pm6) $ \newline
+            Use formula of ellipsoid: $\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2}$, with $a=\pm3, b=\pm1, c=\pm 6$
+        \end{fleqn}
+
+    \end{paracol}
+\end{document}
