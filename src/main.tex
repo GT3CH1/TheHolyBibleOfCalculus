@@ -11,27 +11,35 @@
 \usepackage{amssymb}
 \usepackage[margin=0.2in]{geometry}
 \usepackage[T1]{fontenc}
+\usepackage{titlesec}
 \DeclareMathOperator{\arcsec}{arcsec}
 \DeclareMathOperator{\arccot}{arccot}
 \DeclareMathOperator{\arccsc}{arcsc}
+\renewcommand{\baselinestretch}{1.25}
+\titlespacing*{\section}
+{0pt}{0ex}{0ex}
+\titlespacing*{\subsection}
+{0pt}{0ex}{0ex}
+
 \begin{document}
     \section*{Calculus III - MATH 2210 SP2021}
     \begin{paracol}{2}
         \section*{Week 1}
-        Equation for a sphere: $(x-h)^2+(y-j)^2+(z-k)^2=r^2$
+        Equation for a sphere: $(x-h)^2+(y-j)^2+(z-k)^2=r^2$ \newline
+        Equation of a plane: $a(x-x_p)+b(y-y_p)+c(z-z_p)=d$ \newline
         Midpoint: $m_x=\frac{x_1-x_2}{2}$\newline
         Magnitude: $|u| = \sqrt{u_1^2 + u_2^2 + u_3^2}$ \newline
         Projection of U onto V: \newline
-        $pr_{v}u=( \frac{u \cdot v}{||v||} )$
-        Sphere eq.: $(x-j)^2 +(y-k)^2 + (z-l)^2 = r^2$, $r=\frac{\sqrt{m_1^2 + m_2^2 + m_3^2}}{2}$ \newline
+        $pr_{v}u=( \frac{u \cdot v}{||v||} )$ \newline
+        Sphere eq.: $(x-j)^2 +(y-k)^2 + (z-l)^2 = r^2$ \newline $r=\sqrt{m_1^2 + m_2^2 + m_3^2}$ \newline
         $u \times v = <u_2 v_3 - u_3 v_2, u_3 v_1 - u_1 v_3 , u_1 v_2 - u_2 v_1 >$ \newline
-        $||u \times v|| = ||u||||v||\sin \theta$
+        $||u \times v|| = ||u||||v||\sin \theta$ \newline
         $a \cdot b = ||a||||b|| \cos \theta$ \newline
         The equation for a plane with normal vector <a,b,c> is: \newline
         $ax+by+cz=d$ - parallel planes have same normal vectors. \newline
         Find equation of plane containing three points P, Q, R \newline
         $\overrightarrow{\text{PQ}} = \overrightarrow{\text{P}} - \overrightarrow{\text{Q}}$,
-        $\overrightarrow{\text{PR}} = \overrightarrow{\text{P}} - \overrightarrow{\text{R}}$, $n = \overrightarrow{\text{PQ}} \times \overrightarrow{\text{PR}}$
+        $\overrightarrow{\text{PR}} = \overrightarrow{\text{P}} - \overrightarrow{\text{R}}$, $<a,b,c> = \overrightarrow{\text{PQ}} \times \overrightarrow{\text{PR}}$
 
         \section*{Week 2}
         $a_t = T \cdot a$ \newline
@@ -40,8 +48,7 @@
         $T(t) = \frac{1}{||r'(t)||} \cdot r'(t)$ \newline
         $N(t) = \frac{1}{||T'(t)||} \cdot T'(t)$ \newline
         $K(t) = \frac{||r'(t) \times r''(t)||}{||r'(t)||^3}$ \newline
-        $B(t) = T(t) \times N(t)$ \newline
-
+        $B(t) = T(t) \times N(t)$
 
         \section*{Week 3}
 
@@ -53,31 +60,32 @@
         \subsection*{Cartesian \guillemotright Spherical}
         $r=\sqrt{x^2+y^2+z^2}$ \newline
         $\theta = \arctan(\frac{y}{x})$ \newline
-        $\phi = \arccos(\frac{z}{r})$ \newline
+        $\phi = \arccos(\frac{z}{r})$
 
         \subsection*{Cylindrical \guillemotright Cartesian}
         $x = r \cos\theta$ \newline
         $y = r \sin\theta$ \newline
         $z = z$ \newline
+
         \switchcolumn
+
         \subsection*{Cylindrical \guillemotright Spherical}
         $r=\sqrt{\rho^2 + z^2}$ \newline
         $\phi = \arctan(\frac{\rho}{z})$ \newline
         $\theta = \theta$
 
         \subsection*{Spherical \guillemotright Cylindrical}
-        \begin{fleqn}
+
             $
             \rho = r \sin \theta \newline
             \theta = \theta \newline
-            z = \cos \theta \newline
+            z = \cos \theta
             $
-        \end{fleqn}
 
         \subsection*{Spherical \guillemotright Cartesian}
         $x = r \sin\phi \cos \theta$ \newline
         $y = r \sin\phi \sin \theta$    \newline
-        $z = r \cos\phi$    \newline
+        $z = r \cos\phi$
 
         \subsection*{Equations}
         \begin{fleqn}
@@ -97,19 +105,35 @@
             Let L be determined by the equations $y=2$ and $x=6z$. If we rotate around the X axis, we get an equation
             \newline
             $Ax^2 + By^2 + Cz^2 = 1$, find A, B, and C.\newline
-            $y^2 + z^2 = 2^2$ \newline
-            $\frac{1}{4}y^2 + \frac{1}{4}z^2 = 1  (B,C)$ \newline
+            $y^2 + z^2 = 2^2$ \guillemotright $\frac{1}{4}y^2 + \frac{1}{4}z^2 = 1  (B,C)$ \newline
             Find a second point, this case it will be $<6,2,1>$ \newline
-            $A(6)^2 + \frac{1}{4}(2)^2 + \frac{1}{4}(1)^2 = 1$ \newline
-            $A(6)^2 + \frac{1}{4}(1)^2 = 0$ \newline
-            $A36 = - \frac{1}{4}$ \newline
-            $A = - \frac{1}{4*36}$ \newline
+            $A(6)^2 + \frac{1}{4}(2)^2 + \frac{1}{4}(1)^2 = 1$ \guillemotright $A(6)^2 + \frac{1}{4}(1)^2 = 0$ \newline
+            $A36 = - \frac{1}{4}$ \guillemotright $A = - \frac{1}{4*36}$ \newline
         \end{fleqn}
-
+        \newline
         \begin{fleqn}
             Find an equation of the ellipsoid passing through the points \newline
             $(\pm3,0,0),(0,\pm1,0),(0,0,\pm6) $ \newline
             Use formula of ellipsoid: $\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2}$, with $a=\pm3, b=\pm1, c=\pm 6$
+        \end{fleqn}
+        \newline
+        \newline
+        \newline
+        \switchcolumn
+        \begin{fleqn}
+            A gun has a muzzle speed of 90 meters per second. What angle of elevation $\theta$ should be used to hit an object
+            170 meters away? use $g=9.8 \frac{m}{s^2}$ \newline
+            $u=90\frac{m}{s}$, $s=170m$, $g=9.8\frac{m}{s^2}$, $u_x=\cos\theta$, $u_y=\sin\theta$ \newline
+            $s = u\cos\theta t$ \guillemotright
+            $170=90\cos\theta t$ \guillemotright
+            $t=\frac{17}{9\cos\theta}$\newline
+            $s_y=u_y + \frac{1}{2}at^2$ \guillemotright
+            $0=90\sin\theta \frac{17}{9\cos\theta} + 4.9 (\frac{17}{9\cos\theta})^2$ \newline
+            $170\tan\theta = \frac{4.9 \cdot 289}{81} \cdot \frac{1}{\cos^2\theta}$ \guillemotright
+            $170 \frac{\sin}{\cos}\theta = \frac{4.9\cdot289}{81}$ \newline
+            $\frac{170}{85}\sin\theta\cos\theta = \frac{4.9\cdot289}{81\cdot85}$ \guillemotright
+            $\sin 2\theta = \frac{4.9\cdot289}{81\cdot85}$ \newline
+            $2 \theta = \arcsin(\frac{4.9\cdot289}{81\cdot85})$ \newline
         \end{fleqn}
 
         \newpage
